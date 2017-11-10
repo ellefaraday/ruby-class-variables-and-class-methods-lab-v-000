@@ -6,8 +6,10 @@ class Song
     @genre = genre
 
     @@count += 1
-    @@artists.include?(artist) : @@artists << artist
-    @@genres.include?(genre) : @@genres << genre
+    @@artists.include?(artist) ? : @@artists << artist
+    @@genres.include?(genre) ? : @@genres << genre
+    @@genre_count.include?(genre) ? @@genre_count[genre] += 1 : @@genre_count[genre] = 1
+    @@artist_count.inclue?(artist) ? @@artist_count[artist] += 1 : @@artist_count[artist] = 1
   end
 
   attr_accessor :name, :artist, :genre
@@ -15,6 +17,8 @@ class Song
   @@count = 0
   @@artists = []
   @@genres = []
+  @@genre_count = {}
+  @@artist_count = {}
 
   def self.count
     @@count
@@ -29,4 +33,3 @@ class Song
   end
 
 end
-  
