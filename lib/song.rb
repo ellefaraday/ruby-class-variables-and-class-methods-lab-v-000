@@ -6,12 +6,8 @@ class Song
     @genre = genre
 
     @@count += 1
-    unless @@artists.include?(artist)
-      @@artists << artist
-    end
-    unless @@genres.include?(genre)
-      @@genres << genre
-    end
+    @@artists << artist
+    @@genres << genre
     @@genre_count.include?(genre) ? @@genre_count[genre] += 1 : @@genre_count[genre] = 1
     @@artist_count.include?(artist) ? @@artist_count[artist] += 1 : @@artist_count[artist] = 1
   end
