@@ -13,7 +13,7 @@ class Song
       @@genres << genre
     end
     @@genre_count.include?(genre) ? @@genre_count[genre] += 1 : @@genre_count[genre] = 1
-    @@artist_count.inclue?(artist) ? @@artist_count[artist] += 1 : @@artist_count[artist] = 1
+    @@artist_count.include?(artist) ? @@artist_count[artist] += 1 : @@artist_count[artist] = 1
   end
 
   attr_accessor :name, :artist, :genre
